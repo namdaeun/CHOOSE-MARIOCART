@@ -19,6 +19,21 @@
           padding: 10px;                       /*버튼 내부에서의 테두리 두께*/
           bottom: 200px;             /*밑에서의 높이*/
         }
+        .button {
+          position: absolute;
+          border-top-right-radius: 5px;        /*모든 방향 꼭짓점 둥글게*/
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: white;
+          font-family: 'Jua', sans-serif;
+          text-decoration: none;
+          right: 200px;
+        }
+        .button:hover{
+          background-color: #fff7dc;      /*마우스를 올렸을 때 버튼의 배경 색상*/
+          font-family: 'Jua', sans-serif;
+        }
     </style>
   </head>
 <body>
@@ -26,7 +41,7 @@
   <h3>당신이 선택한 차량은<br></h3>
   <?php
   $conn = mysqli_connect("localhost","root","removethestuff18","web");
-  $sql = "SELECT car FROM choose_car WHERE id=1";
+  $sql = "SELECT car FROM choose_car order by id desc limit 1";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
@@ -37,4 +52,6 @@
   }
   mysqli_close($conn); // 디비 접속 닫기
   ?>
+  <button class="button" type="button" onclick="location.href='main.php';">처음으로 돌아가기</button>
+  <h3>입니다 🎉🎉🎉</h3>
 </body>

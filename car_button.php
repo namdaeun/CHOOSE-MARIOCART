@@ -27,6 +27,10 @@
         text-align: center;                     /*텍스트 가운데 배열 */
         font-family: 'Jua', sans-serif;
       }
+      .button:hover {
+        background-color: #fff7dc;      /*마우스를 올렸을 때 버튼의 배경 색상*/
+        font-family: 'Jua', sans-serif;
+      }
       </style>
     </head>
     <body>

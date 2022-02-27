@@ -26,7 +26,7 @@
     <?php
       $car = $_POST['car'];
 
-      $conn = mysqli_connect( 'localhost', 'root', 'removethestuff18', 'web' );
+      $conn = mysqli_connect( 'localhost', 'root', 'danee2331', 'web' );
       $sql = "INSERT INTO choose_car (car)
         VALUES ('$car');";
       $result=mysqli_query($conn, $sql);

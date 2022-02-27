@@ -56,7 +56,7 @@
     <h3>분석 결과, 당신의 맞춤 캐릭터는 바로<br></h3>
     <?php
     $conn=mysqli_connect("localhost","root","removethestuff18","web");
-    $sql="SELECT * FROM choose WHERE id=1";
+    $sql="SELECT * FROM choose order by id desc limit 1";
     $result=mysqli_query($conn,$sql);
     if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
