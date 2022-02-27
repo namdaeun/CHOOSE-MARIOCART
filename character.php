@@ -17,9 +17,6 @@
       padding: 80px;                          /*제목과 본문 사이 공간 띄우기*/
       margin: 0px;                            /*border과 바깥과의 여백 없애기*/
     }
-
-   /*character클래스를 사용해서 그림과 텍스트를 좀 더 보기 쉽게 배치하려고 했으나 아직 시도 중*/
-
     p{                                       /*캐릭터를 설명하는 텍스트 꾸미기*/
       position: relative;
       color: #ffffff;                        /*글자 색깔 : 흰색*/
@@ -28,14 +25,29 @@
       left: 550px;                           /*왼쪽에서 550px만큼 움직인 곳에 위치*/
       background-color: #F2CB61;             /*텍스트가 입력된 공간의 배경색 지정*/
     }
+    .button {
+      position: absolute;
+      border-top-right-radius: 5px;        /*모든 방향 꼭짓점 둥글게*/
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background: white;
+      font-family: 'Jua', sans-serif;
+      text-decoration: none;
+      right: 200px;
+    }
+    .button:hover{
+      background-color: #fff7dc;      /*마우스를 올렸을 때 버튼의 배경 색상*/
+      font-family: 'Jua', sans-serif;
+    }
     </style>
     <title>
       캐릭터 소개
     </title>
   </head>
   <body>
-    <input type="button" value="캐릭터 상세보기" onclick="location.href='character_mysql.php'"><br><br>
-    <input type="button" value="캐릭터 선택하러가기" onclick="location.href='character_button.php'">
+    <input type="button" class="button" value="캐릭터 상세보기" onclick="location.href='character_mysql.php'"><br><br>
+    <input type="button" class="button" value="캐릭터 선택하러가기" onclick="location.href='character_button.php'">
     <h1 id="title">나에게 맞는 캐릭터를 골라보자! </h1>
     <div class="character">
       <class="mario">

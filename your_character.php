@@ -19,6 +19,36 @@
           padding: 10px;                       /*버튼 내부에서의 테두리 두께*/
           bottom: 200px;             /*밑에서의 높이*/
         }
+        .move {
+          position: absolute;
+          border-top-right-radius: 5px;        /*모든 방향 꼭짓점 둥글게*/
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: white;
+          font-family: 'Jua', sans-serif;
+          text-decoration: none;
+          left: 200px;
+        }
+        .move:hover{
+          background-color: rgb(200, 220, 250);      /*마우스를 올렸을 때 버튼의 배경 색상*/
+          font-family: 'Jua', sans-serif;
+        }
+        .before {
+          position: absolute;
+          border-top-right-radius: 5px;        /*모든 방향 꼭짓점 둥글게*/
+          border-bottom-right-radius: 5px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          background: white;
+          font-family: 'Jua', sans-serif;
+          text-decoration: none;
+          right: 200px;
+        }
+        .before:hover{
+          background-color: rgb(200, 220, 250);      /*마우스를 올렸을 때 버튼의 배경 색상*/
+          font-family: 'Jua', sans-serif;
+        }
     </style>
   </head>
   <body>
@@ -97,7 +127,8 @@
      ?>
     <h3>  입니다 🎉🎉🎉</h3>
     <img src="단체사진.png" class="everybody" width="600" height="350"/></img>
-    <br>
-    <a href="car_button.php">차량선택창으로</a>
+    <p>
+      <button class="before" type="button" onclick="location.href='character_button.php';">이전 페이지로 돌아가기</button>
+      <button class="move" type="button" onclick="location.href='car_button.php';">차량 선택하러 가기</button>
   </body>
 </html>
