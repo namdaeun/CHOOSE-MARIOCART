@@ -17,15 +17,29 @@
       padding: 80px;                          /*제목과 본문 사이 공간 띄우기*/
       margin: 0px;                            /*border과 바깥과의 여백 없애기*/
     }
-
+    .go {
+      position: absolute;
+      border-top-right-radius: 5px;        /*모든 방향 꼭짓점 둥글게*/
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background: white;
+      font-family: 'Jua', sans-serif;
+      text-decoration: none;
+      right: 200px;
+    }
+    .go:hover{
+      background-color: #fff7dc;      /*마우스를 올렸을 때 버튼의 배경 색상*/
+      font-family: 'Jua', sans-serif;
+    }
     </style>
   </head>
   <body>
-    <input type="button" value="캐릭터 선택하러가기" onclick="location.href='character_button.php'">
+    <input type="button" class="go" value="캐릭터 선택하러가기" onclick="location.href='character_button.php'">
     <br><br>
     <h1 id="title">캐릭터 상세정보</h1>
     <?php
-      $conn=mysqli_connect("localhost","root","removethestuff18","web");
+      $conn=mysqli_connect("localhost","root","111111","web");
       $sql="SELECT name, speed, acceleration, handling, friction, weight FROM mario";
       $result=mysqli_query($conn,$sql);
       if (mysqli_num_rows($result) > 0) {
@@ -41,7 +55,7 @@
 
     <h1 id="title">차량 상세정보</h1>
     <?php
-      $conn=mysqli_connect("localhost","root","removethestuff18","web");
+      $conn=mysqli_connect("localhost","root","111111","web");
       $sql="SELECT name, description FROM car";
       $result=mysqli_query($conn,$sql);
       if (mysqli_num_rows($result) > 0) {
