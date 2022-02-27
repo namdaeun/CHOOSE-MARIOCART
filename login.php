@@ -3,7 +3,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>로그인 페이지</title>
     <style>
     body
     {

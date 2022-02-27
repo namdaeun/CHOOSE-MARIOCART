@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset = "utf-8">
-    <title>캐릭터 고르기</title>
+    <title>차량 고르기</title>
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');  /*웹폰트 링크 불러오기*/
@@ -24,20 +24,16 @@
   </head>
   <body>
     <?php
-      $speed = $_POST['speed'];
-      $acceleration = $_POST['acceleration'];
-      $handling = $_POST['handling'];
-      $friction = $_POST['friction'];
-      $weight = $_POST['weight'];
+      $car = $_POST['car'];
 
       $conn = mysqli_connect( 'localhost', 'root', 'removethestuff18', 'web' );
-      $sql = "INSERT INTO choose ( speed, acceleration, handling, friction, weight)
-        VALUES ( '$speed', '$acceleration', '$handling', '$friction', '$weight');";
+      $sql = "INSERT INTO choose_car (car)
+        VALUES ('$car');";
       $result=mysqli_query($conn, $sql);
 
       if($result) {
         echo "등록성공";
-        echo '<br><br><a href="your_character.php">나에게 맞는 캐릭터 확인하기</a>';
+        echo '<br><br><a href="your_car.php">내가 선택한 차량 확인하기</a>';
       }else {
         echo "등록실패";
       }

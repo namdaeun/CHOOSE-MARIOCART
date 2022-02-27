@@ -24,4 +24,4 @@
     session_start();
     $_SESSION['id'] = $id;
 ?>
-<meta http-equiv="refresh" content="0;url=넘어갈 주소" />
+<meta http-equiv="refresh" content="0;url=character.php" />

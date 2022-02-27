@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>캐릭터 설명</title>
     <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');  /*웹폰트 링크 불러오기*/
@@ -16,8 +15,11 @@
     #title{                                   /*페이지의 제목에 해당하는 id식별자*/
       font-size: 50px;
       padding: 80px;                          /*제목과 본문 사이 공간 띄우기*/
-      margin: 0px;                           /*border과 바깥과의 여백 없애기*/
+      margin: 0px;                            /*border과 바깥과의 여백 없애기*/
     }
+
+   /*character클래스를 사용해서 그림과 텍스트를 좀 더 보기 쉽게 배치하려고 했으나 아직 시도 중*/
+
     p{                                       /*캐릭터를 설명하는 텍스트 꾸미기*/
       position: relative;
       color: #ffffff;                        /*글자 색깔 : 흰색*/
@@ -26,25 +28,21 @@
       left: 550px;                           /*왼쪽에서 550px만큼 움직인 곳에 위치*/
       background-color: #F2CB61;             /*텍스트가 입력된 공간의 배경색 지정*/
     }
-    .button {
-      width: 400px;
-      text-decoration: none;
-      color: black;
-      text-align: right;
-    }
     </style>
     <title>
-
+      캐릭터 소개
     </title>
   </head>
   <body>
-
+    <input type="button" value="캐릭터 상세보기" onclick="location.href='character_mysql.php'"><br><br>
+    <input type="button" value="캐릭터 선택하러가기" onclick="location.href='character_button.php'">
     <h1 id="title">나에게 맞는 캐릭터를 골라보자! </h1>
     <div class="character">
       <class="mario">
       <!--이미지에 따른 클래스 부여 - 아직 못써먹었음-->
         <img class="mario_img"src="마리오.png" width="200" height="250"/>     <!--이미지 가져오고 이미지의 너비와 높이 지정해줌-->
-        <p>난 2단 3단 점프가 가능한 '점프의 대가' 마리오야!</p>                       <!--이미지에 따른 관련 설명 p태그에 담음-->
+        <p>난 2단 3단 점프가 가능한 '점프의 대가' 마리오야!<br>
+        </p>
       </a>
       <a class="raccon">
         <img class="raccon_img"src="너구리마리오.png" class="raccon" width="220" height="250"/>
@@ -79,8 +77,5 @@
         <p>난 여기 있는 캐릭터 중 속도가 가장 높은 쿠파야! 마리오의 숙적이기도 하지</p>
       </a>
     </div>
-    <br><br>
-    <a href="character_button.php" class="button">맞춤형 캐릭터를 원하면 여길 눌러보세요 !</a>
-  <br><br>
   </body>
 </html>
