@@ -34,6 +34,11 @@
           background-color: #fff7dc;      /*마우스를 올렸을 때 버튼의 배경 색상*/
           font-family: 'Jua', sans-serif;
         }
+        .car {
+          position: static;                   /*위치 - 웹브라우저 화면 전체를 기준으로 배치 (스크롤 해도 위치 고정)*/
+          padding: 10px;                       /*버튼 내부에서의 테두리 두께*/
+          bottom: 200px;             /*밑에서의 높이*/
+        }
     </style>
   </head>
 <body>
@@ -52,6 +57,7 @@
   }
   mysqli_close($conn); // 디비 접속 닫기
   ?>
+  <img src="car.png" class="car" width="500" height="500"/></img>
   <button class="button" type="button" onclick="location.href='main.php';">처음으로 돌아가기</button>
   <h3>입니다 🎉🎉🎉</h3>
 </body>
