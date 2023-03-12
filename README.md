@@ -1,4 +1,4 @@
-# CHOOSE-MARIOCART [SISS_WebProject]
+# CHOOSE-MARIOCART
 Let's choose your MARIOKART8 character!
 
 ## 🚗 팀명 [남양]
